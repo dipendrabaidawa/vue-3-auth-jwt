@@ -11,12 +11,12 @@
         <div v-if="!successful">
           <div class="form-group row">
             <div class="col-md-6">
-                <Field name="fname" type="text" class="form-control" placeholder="First Name" />
-                <ErrorMessage name="fname" class="error-feedback" />
+                <Field name="first_name" type="text" class="form-control" placeholder="First Name" />
+                <ErrorMessage name="first_name" class="error-feedback" />
             </div>
             <div class="col-md-6">
-                <Field name="lname" type="text" class="form-control" placeholder="Last Name" />
-                <ErrorMessage name="lname" class="error-feedback" />
+                <Field name="last_name" type="text" class="form-control" placeholder="Last Name" />
+                <ErrorMessage name="last_name" class="error-feedback" />
             </div>
           </div>
           <div class="form-group row">
@@ -27,12 +27,12 @@
           </div>
           <div class="form-group row">
             <div class="col-md-6">
-                <Field name="pswd" type="password" class="form-control" placeholder="Password" />
-                <ErrorMessage name="pswd" class="error-feedback" />
+                <Field name="password" type="password" class="form-control" placeholder="Password" />
+                <ErrorMessage name="password" class="error-feedback" />
             </div>
             <div class="col-md-6">
-                <Field name="rpswd" type="password" class="form-control" placeholder="Repeat Password" />
-                <ErrorMessage name="rpswd" class="error-feedback" />
+                <Field name="confirm_password" type="password" class="form-control" placeholder="Repeat Password" />
+                <ErrorMessage name="confirm_password" class="error-feedback" />
             </div>
           </div>
 
@@ -80,12 +80,12 @@ export default {
   },
   data() {
     const schema = yup.object().shape({
-      fname: yup
+      first_name: yup
         .string()
         .required("First name is required!")
         .min(3, "Must be at least 2 characters!")
         .max(20, "Must be maximum 20 characters!"),
-      lname: yup
+      last_name: yup
         .string()
         .required("Last name is required!")
         .min(3, "Must be at least 2 characters!")
@@ -95,12 +95,12 @@ export default {
         .required("Email is required!")
         .email("Email is invalid!")
         .max(50, "Must be maximum 50 characters!"),
-      pswd: yup
+      password: yup
         .string()
         .required("Password is required!")
         .min(6, "Must be at least 6 characters!")
         .max(40, "Must be maximum 40 characters!"),
-      rpswd: yup
+      confirm_password: yup
         .string()
         .required("Password is required!")
         .min(6, "Must be at least 6 characters!")
@@ -135,6 +135,7 @@ export default {
           this.message = data.message;
           this.successful = true;
           this.loading = false;
+          this.$router.push("/login");
         },
         (error) => {
           this.message =

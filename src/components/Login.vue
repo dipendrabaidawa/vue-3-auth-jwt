@@ -9,14 +9,12 @@
       <h2 class="text-center font-weight-bold">Sign in</h2>
       <Form @submit="handleLogin" :validation-schema="schema">
         <div class="form-group">
-          <!-- <label for="username">Username</label> -->
-          <Field name="uemail" type="text" class="form-control" placeholder="john.doe@gmail.com" />
-          <ErrorMessage name="uemail" class="error-feedback" />
+          <Field name="email" type="text" class="form-control" placeholder="john.doe@gmail.com" />
+          <ErrorMessage name="email" class="error-feedback" />
         </div>
         <div class="form-group">
-          <!-- <label for="password">Password</label> -->
-          <Field name="pswd" type="password" class="form-control" placeholder="*********" />
-          <ErrorMessage name="pswd" class="error-feedback" />
+          <Field name="password" type="password" class="form-control" placeholder="*********" />
+          <ErrorMessage name="password" class="error-feedback" />
         </div>
 
         <div class="form-group">
@@ -68,8 +66,8 @@ export default {
   },
   data() {
     const schema = yup.object().shape({
-      uemail: yup.string().required("User Email is required!"),
-      pswd: yup.string().required("Password is required!"),
+      email: yup.string().required("User Email is required!"),
+      password: yup.string().required("Password is required!"),
     });
 
     return {
@@ -94,6 +92,7 @@ export default {
 
       this.$store.dispatch("auth/login", user).then(
         () => {
+          console.log("login success", user);
           this.$router.push("/profile");
         },
         (error) => {
