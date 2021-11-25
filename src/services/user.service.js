@@ -1,47 +1,13 @@
 import api from './api';
 
 class UserService {
-  getPublicContent() {
-    return api.get('/test/all');
+  getCandidates(credential) {
+    return api.post(`/candidates?search=${credential.search}&perPage=${credential.perPage}&curPage=${credential.curPage}`);
   }
 
-  getUserBoard() {
-    return api.get('/test/user');
-  }
-
-  getModeratorBoard() {
-    return api.get('/test/mod');
-  }
-
-  getAdminBoard() {
-    return api.get('/test/admin');
+  getCandidate(id) {
+    return api.post(`/candidates/${id}`);
   }
 }
 
 export default new UserService();
-
-// import axios from 'axios';
-// import authHeader from './auth-header';
-
-
-// const API_URL = 'http://localhost:8080/api/test/';
-
-// class UserService {
-//   getPublicContent() {
-//     return axios.get(API_URL + 'all');
-//   }
-
-//   getUserBoard() {
-//     return axios.get(API_URL + 'user', { headers: authHeader() });
-//   }
-
-//   getModeratorBoard() {
-//     return axios.get(API_URL + 'mod', { headers: authHeader() });
-//   }
-
-//   getAdminBoard() {
-//     return axios.get(API_URL + 'admin', { headers: authHeader() });
-//   }
-// }
-
-// export default new UserService();

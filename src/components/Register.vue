@@ -1,70 +1,88 @@
 <template>
-  <div class="col-md-12 flex-center">
-    <div class="card card-container">
-      <!-- <img
-        id="profile-img"
-        src="//ssl.gstatic.com/accounts/ui/avatar_2x.png"
-        class="profile-img-card"
-      /> -->
-      <h2 class="text-center font-weight-bold">Sing Up</h2>
-      <Form @submit="handleRegister" :validation-schema="schema">
-        <div v-if="!successful">
-          <div class="form-group row">
-            <div class="col-md-6">
-                <Field name="first_name" type="text" class="form-control" placeholder="First Name" />
-                <ErrorMessage name="first_name" class="error-feedback" />
+  <div class="uk-section auth-page uk-section-muted uk-flex uk-flex-middle uk-animation-fade uk-background-default-important" uk-height-viewport>
+        <div class="uk-width-1-1">
+            <div class="uk-container">
+                <div class="uk-grid-margin uk-grid uk-grid-stack" uk-grid>
+                    <div class="uk-width-1-1@m">
+                        <div class="uk-margin uk-width-large uk-margin-auto uk-card uk-card-default uk-card-body uk-box-shadow-large">
+                            <a id="logo" class="uk-navbar-item uk-logo text-align-center" href="#">
+                                <img :src="require('../assets/images/logo.png')" uk-img width="250"/>
+                            </a>
+                            <div uk-alert class="uk-alert-danger" v-if="is_error">
+                              <a class="uk-alert-close" uk-close></a>
+                              <h3>Registration failed</h3>
+                              <p>Oops, Something went wrong.</p>
+                              <p> - Make sure if your password is equal to confirm password</p>
+                              <p>{{ message }}</p>
+                            </div>
+                            <h3 class="uk-card-title uk-text-center">Sign up</h3>
+                            <Form @submit="handleRegister" :validation-schema="schema">
+                              <div v-if="!successful">
+                                <div class="uk-margin">
+                                    <div class="uk-inline uk-width-1-1">
+                                        <span class="uk-form-icon" uk-icon="icon: user"></span>
+                                        <Field name="first_name" type="text" class="uk-input uk-form-large" placeholder="First Name" />
+                                        <ErrorMessage name="first_name" class="error-feedback" />
+                                    </div>
+                                </div>
+                                <div class="uk-margin">
+                                  <div class="uk-inline uk-width-1-1">
+                                      <span class="uk-form-icon" uk-icon="icon: user"></span>
+                                      <Field name="last_name" type="text" class="uk-input uk-form-large" placeholder="Last Name" />
+                                      <ErrorMessage name="last_name" class="error-feedback" />
+                                  </div>
+                                </div>
+                                <div class="uk-margin">
+                                  <div class="uk-inline uk-width-1-1">
+                                      <span class="uk-form-icon" uk-icon="icon: mail"></span>
+                                      <Field name="email" type="email" class="uk-input uk-form-large" placeholder="Email" />
+                                      <ErrorMessage name="email" class="error-feedback" />
+                                  </div>
+                                </div>
+                                <div class="uk-margin">
+                                  <div class="uk-inline uk-width-1-1">
+                                      <span class="uk-form-icon" uk-icon="icon: lock"></span>
+                                      <Field name="password" type="password" class="uk-input uk-form-large" placeholder="Password" />
+                                      <ErrorMessage name="password" class="error-feedback" />
+                                  </div>
+                                </div>
+                                <div class="uk-margin">
+                                  <div class="uk-inline uk-width-1-1">
+                                      <span class="uk-form-icon" uk-icon="icon: lock"></span>
+                                      <Field name="confirm_password" type="password" class="uk-input uk-form-large" placeholder="Repeat Password" />
+                                      <ErrorMessage name="confirm_password" class="error-feedback" />
+                                  </div>
+                                </div>
+                                <div class="uk-margin">
+                                  <button class="uk-button uk-button-primary uk-button-large uk-width-1-1" :disabled="loading">
+                                    <span
+                                      v-show="loading"
+                                      class="spinner-border spinner-border-sm"
+                                    ></span>
+                                    SIGN UP
+                                  </button>
+                                </div>
+                                <div class="uk-text-small uk-text-center">
+                                    Do you have an account? 
+                                    <router-link to="/login">
+                                          Login
+                                    </router-link>
+                                </div>
+                              </div>
+                            </Form>
+                            <!-- <div
+                              v-if="message"
+                              class="alert"
+                              :class="successful ? 'alert-success' : 'alert-danger'"
+                            >
+                              {{ message }}
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-6">
-                <Field name="last_name" type="text" class="form-control" placeholder="Last Name" />
-                <ErrorMessage name="last_name" class="error-feedback" />
-            </div>
-          </div>
-          <div class="form-group row">
-            <div class="col-md-12">
-                <Field name="email" type="email" class="form-control" placeholder="Email" />
-                <ErrorMessage name="email" class="error-feedback" />
-            </div>
-          </div>
-          <div class="form-group row">
-            <div class="col-md-6">
-                <Field name="password" type="password" class="form-control" placeholder="Password" />
-                <ErrorMessage name="password" class="error-feedback" />
-            </div>
-            <div class="col-md-6">
-                <Field name="confirm_password" type="password" class="form-control" placeholder="Repeat Password" />
-                <ErrorMessage name="confirm_password" class="error-feedback" />
-            </div>
-          </div>
-
-          <div class="form-group">
-            <button class="btn btn-primary btn-block" :disabled="loading">
-              <span
-                v-show="loading"
-                class="spinner-border spinner-border-sm"
-              ></span>
-              SIGN UP
-            </button>
-          </div>
-
-          <div class="form-group">
-            <p class="text-center" >
-                <router-link to="/login">
-                    Sign In
-                </router-link>
-            </p>
-          </div>
         </div>
-      </Form>
-
-      <div
-        v-if="message"
-        class="alert"
-        :class="successful ? 'alert-success' : 'alert-danger'"
-      >
-        {{ message }}
-      </div>
     </div>
-  </div>
 </template>
 
 <script>
@@ -112,6 +130,7 @@ export default {
       loading: false,
       message: "",
       schema,
+      is_error: false
     };
   },
   computed: {
@@ -120,8 +139,8 @@ export default {
     },
   },
   mounted() {
-    if (this.loggedIn) {
-      this.$router.push("/profile");
+    if (this.currentUser) {
+      this.$router.push("/candidates");
     }
   },
   methods: {
@@ -135,6 +154,7 @@ export default {
           this.message = data.message;
           this.successful = true;
           this.loading = false;
+          this.is_error = false;
           this.$router.push("/login");
         },
         (error) => {
@@ -146,6 +166,7 @@ export default {
             error.toString();
           this.successful = false;
           this.loading = false;
+          this.is_error = true;
         }
       );
     },

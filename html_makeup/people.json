@@ -1,0 +1,73 @@
+[
+  {
+    "_id": "",
+    "full_name": "Bohdan Romanenko",
+    "logo_url": "xxx",
+    "title": "Senior Front-end Developer",
+    "location": "Kiev, Ukraine",
+    "skills": ["Node.js", "React.js", "JavaScript", "HTML5", "CSS3", "MongoDB", "JQUERY", "Swagger", "Docker", "PHP", "MySQL", "Laravel", "OOP", "Linux", "PostgreSQL", "UnitTests", "Vue.js", "Angular2", "Design Patterns"],
+    "exp": [
+      {
+        "title": "Front-end Developer",
+        "company": "Epam",
+        "start": "Jan 2020",
+        "finish": "Present",
+        "location": "Kiev, Ukraine",
+        "notes": "I have worked at Epam under Front-end apps bla bla bla bla...",
+        "is_experience_relevant": 1
+      },
+      {
+        "title": "Full Stack Developer",
+        "company": "Luxoft",
+        "start": "Jan 2018",
+        "finish": "Dec 2019",
+        "location": "Kiev, Ukraine",
+        "notes": "I have worked at Luxoft under Front-end and Back-end apps bla bla bla bla...",
+        "is_experience_relevant": 1
+      },
+      {
+        "title": "Junior Front-end Developer",
+        "company": "Daxx",
+        "start": "Jan 2016",
+        "finish": "Dec 2017",
+        "location": "Lviv, Ukraine",
+        "notes": "I have worked at Daxx under Front-end apps bla bla bla bla...",
+        "is_experience_relevant": 1
+      },
+      {
+        "title": "Account Manager",
+        "company": "Zone3000",
+        "start": "Jan 2014",
+        "finish": "Dec 2015",
+        "location": "Kharkiv, Ukraine",
+        "notes": "I have been Account Manager at Zone3000 bla bla bla bla...",
+        "is_experience_relevant": 0
+      }
+    ],
+    "exp_total": "95",
+    "exp_relevant_total": "71",
+    "exp_last_total": "23",
+    "education": [
+      {
+        "institution_name": "Lviv Polytechnic National University",
+        "location": "Lviv, Ukraine",
+        "start": "Jan 2017",
+        "finish": "Present"
+      },
+      {
+        "institution_name": "Lviv Polytechnic College",
+        "location": "Lviv, Ukraine",
+        "start": "Jan 2014",
+        "finish": "Jan 2016"
+      }
+    ],
+    "about": "Experienced Software Engineer with a demonstrated history of working in the information technology and services industry. Skilled in Amazon Web Services(AWS), MongoDB, Heroku, Javascript, TypeScript and Node.js. Strong information technology professional with a master of science focused in computer engineering from lviv polytechnic national university",
+    "contacts": {
+      "email": "xxx",
+      "linkedin": "xxx",
+      "skype": "xxx",
+      "github": "xxx",
+      "fb": "xxx"
+    }
+  }
+]

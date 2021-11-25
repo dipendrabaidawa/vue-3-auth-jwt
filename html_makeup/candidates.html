@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <link href="css/uikit.min.css" rel="stylesheet"/>
+    <link href="css/styles.css" rel="stylesheet"/>
+    <script src="js/uikit.min.js"></script>
+    <script src="js/uikit-icons.min.js"></script>
+</head>
+<body>
+    <div class="uk-container">
+        <nav class="uk-navbar uk-navbar-container uk-background-default-important" uk-navbar>
+            <div class="uk-navbar-left uk-width-2-3">
+                <a id="logo" class="uk-navbar-item uk-logo" href="#">
+                    <img data-src="images/logo.png" uk-img width="150"/>
+                </a>
+                <form action="javascript:void(0)">
+                    <input class="uk-input search-input uk-navbar-left uk-form-width-large" placeholder="Search" type="text"/>
+                </form>
+            </div>
+            <div class="uk-navbar-item uk-navbar-right">
+                <button class="uk-button uk-button-default uk-navbar-right margin-right-5">Sign in</button>
+                <button class="uk-button uk-button-primary uk-navbar-right">Sign up</button>
+            </div>
+        </nav>
+    </div>
+
+    <hr class="uk-margin-remove-top"/>
+
+    <div class="uk-container">
+        <div uk-grid>
+            <div class="uk-width-1-4@m uk-margin-small-left uk-margin-small-right">
+                <form class="uk-text-small">
+                    <div class="margin-top-5">
+                        <label class="uk-form-label" for="job-title">Job Title</label>
+                        <div class="uk-form-controls">
+                            <input class="uk-input" id="job-title" placeholder="" type="text"/>
+                        </div>
+                    </div>
+                    <div class="margin-top-5">
+                        <label class="uk-form-label" for="location">Location</label>
+                        <div class="uk-form-controls">
+                            <input class="uk-input" id="location" placeholder="" type="text"/>
+                        </div>
+                    </div>
+                    <div class="margin-top-5">
+                        <label class="uk-form-label" for="skills">Skills</label>
+                        <div class="uk-form-controls">
+                            <input class="uk-input" id="skills" placeholder="" type="text"/>
+                        </div>
+                    </div>
+                    <div class="margin-top-5">
+                        <label class="uk-form-label" for="keywords">Keywords</label>
+                        <div class="uk-form-controls">
+                            <input class="uk-input" id="keywords" placeholder="" type="text"/>
+                        </div>
+                    </div>
+                    <div class="margin-top-10">
+                        <label class="uk-form-label margin-top-5" for="experience">Experience</label>
+                        <div class="uk-form-controls">
+                            <input class="uk-range" id="experience" type="range"/>
+                        </div>
+                    </div>
+                    <div class="margin-top-10">
+                        <label class="uk-form-label margin-top-5" for="last-work-period">Last work period</label>
+                        <div class="uk-form-controls">
+                            <input class="uk-range" id="last-work-period" type="range">
+                        </div>
+                    </div>
+                    <div class="margin-top-10">
+                        <div class="uk-form-controls margin-top-5">
+                            <input class="uk-checkbox" id="open-to-work" placeholder=""  type="checkbox">
+                            <label class="uk-form-label" for="open-to-work">Open to work</label>
+                        </div>
+                    </div>
+                    <div class="uk-flex margin-top-20">
+                        <div class="uk-width-1-2 padding-right-5">
+                            <button class="uk-button uk-button-default uk-width-1-1" type="reset">Reset</button>
+                        </div>
+                        <div class="uk-width-1-2 padding-left-5">
+                            <button class="uk-button uk-button-primary uk-width-1-1" type="reset">Search</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="uk-width-expand@m padding-right-15">
+                <hr class="uk-hidden@m"/>
+                <div class="uk-flex uk-flex-right">
+                    <form class="uk-form">
+                        <select class="uk-select uk-form-small" id="form-horizontal-select">
+                            <option>Experience ↓</option>
+                            <option>Experience ↑</option>
+                            <option>Last Work Period ↓</option>
+                            <option>Last Work Period ↑</option>
+                        </select>
+                    </form>
+                </div>
+                <div class="item padding-left-15 padding-right-15">
+                    <div class="person-row">
+                        <div class="uk-flex uk-flex-left@l profile-overview">
+                            <img alt="avatar" class="uk-border-circle" height="80" src="images/avatar.jpeg" width="80"/>
+                            <div class="uk-flex uk-flex-column uk-width-1-1">
+                                <div class="padding-left-10">
+                                    <h4 class="uk-margin-remove uk-text-secondary uk-text-medium">
+                                        <b>Bohdan Romanenko </b>
+                                    </h4>
+                                </div>
+                                <div class="padding-left-13">
+                                    <h5 class="uk-margin-remove uk-text-secondary uk-text-medium">
+                                        Javascript/Node.js Software Engineer Lead
+                                    </h5>
+                                </div>
+                                <div class="padding-left-8">
+                                    <div class="uk-flex margin-top-5">
+                                        <div>
+                                            <span uk-icon="icon: location; ratio: 0.8"></span><span class="uk-text-small"> Liviv, Ukraine </span>
+                                        </div>
+                                        <div class="uk-margin-medium-left">
+                                            <span class="uk-text-secondary uk-text-small">
+                                                <b><span class="uk-text-success"> 5y 3m </span> / 8y 1m</b>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="uk-flex uk-flex-left@l">
+                            <div class="uk-margin-top skills-info">
+                                <a class=" uk-button uk-button-default uk-button-xs uk-border-rounded padding-left-10 padding-right-10 ">Node.JS </a>
+                                <a class=" uk-button uk-button-default uk-button-xs uk-border-rounded padding-left-10 padding-right-10 ">React.js </a>
+                                <a class=" uk-button uk-button-default uk-button-xs uk-border-rounded padding-left-10 padding-right-10 ">HTML5</a>
+                                <a class=" uk-button uk-button-default uk-button-xs uk-border-rounded padding-left-10 padding-right-10 ">CSS3 </a>
+                                <a class=" uk-button uk-button-default uk-button-xs uk-border-rounded padding-left-10 padding-right-10 ">MongoDB </a>
+                                <a class=" uk-button uk-button-default uk-button-xs uk-border-rounded padding-left-10 padding-right-10 ">JQUERY </a>
+                                <a class=" uk-button uk-button-default uk-button-xs uk-border-rounded padding-left-10 padding-right-10 ">JQUERY </a>
+                                <a class=" uk-button uk-button-default uk-button-xs uk-border-rounded padding-left-10 padding-right-10 ">JQUERY </a>
+                                <a class=" uk-button uk-button-default uk-button-xs uk-border-rounded padding-left-10 padding-right-10 ">JQUERY </a>
+                                <a class=" uk-button uk-button-default uk-button-xs uk-border-rounded padding-left-10 padding-right-10 ">JQUERY </a>
+                                <a class=" uk-button uk-button-default uk-button-xs uk-border-rounded padding-left-10 padding-right-10 ">JQUERY </a>
+                                <a class=" uk-button uk-button-default uk-button-xs uk-border-rounded padding-left-10 padding-right-10 ">JQUERY </a>
+                                <a class=" uk-button uk-button-default uk-button-xs uk-border-rounded padding-left-10 padding-right-10 ">JQUERY </a>
+                                <a class=" uk-button uk-button-default uk-button-xs uk-border-rounded padding-left-10 padding-right-10 ">JQUERY </a>
+                                <a class=" uk-button uk-button-default uk-button-xs uk-border-rounded padding-left-10 padding-right-10 ">JQUERY </a>
+                                <a class=" uk-button uk-button-default uk-button-xs uk-border-rounded padding-left-10 padding-right-10 ">JQUERY </a>
+                                <a class=" uk-button uk-button-default uk-button-xs uk-border-rounded padding-left-10 padding-right-10 ">JQUERY </a>
+                                <a class=" uk-button uk-button-default uk-button-xs uk-border-rounded padding-left-10 padding-right-10 ">JQUERY </a>
+                                <a class=" uk-button uk-button-default uk-button-xs uk-border-rounded padding-left-10 padding-right-10 ">JQUERY </a>
+                                <a class=" uk-button uk-button-default uk-button-xs uk-border-rounded padding-left-10 padding-right-10 ">JQUERY </a>
+                                <a class=" uk-button uk-button-default uk-button-xs uk-border-rounded padding-left-10 padding-right-10 ">JQUERY </a>
+                                <a class=" uk-button uk-button-default uk-button-xs uk-border-rounded padding-left-10 padding-right-10 ">JQUERY </a>
+                                <a class=" uk-button uk-button-default uk-button-xs uk-border-rounded padding-left-10 padding-right-10 ">JQUERY </a>
+                                <a class=" uk-button uk-button-default uk-button-xs uk-border-rounded padding-left-10 padding-right-10 ">JQUERY </a>
+                                <a class=" uk-button uk-button-default uk-button-xs uk-border-rounded padding-left-10 padding-right-10 ">JQUERY </a>
+                                <a class=" uk-button uk-button-default uk-button-xs uk-border-rounded padding-left-10 padding-right-10 ">JQUERY </a>
+                                <a class=" uk-button uk-button-default uk-button-xs uk-border-rounded padding-left-10 padding-right-10 ">JQUERY </a>
+                                <a class=" uk-button uk-button-default uk-button-xs uk-border-rounded padding-left-10 padding-right-10 ">JQUERY </a>
+                                <a class=" uk-button uk-button-default uk-button-xs uk-border-rounded padding-left-10 padding-right-10 ">JQUERY </a>
+                                <a class=" uk-button uk-button-default uk-button-xs uk-border-rounded padding-left-10 padding-right-10 ">Swagger </a>
+                                <a class=" uk-button uk-button-default uk-button-xs uk-border-rounded padding-left-10 padding-right-10 ">Docker </a>
+                            </div>
+                        </div>
+                        <div class="experience uk-flex uk-flex-left@l margin-top-5 justify-content-between">
+                            <div>
+                                <span><b class="uk-text-success">Senior Javascript/Node.js Software Engineer</b> at Guesty</span>
+                            </div>
+                            <div class="dates">
+                                <span class="uk-text-small">(Jan 2018 - Jan 2020)</span>
+                                <span class="uk-text-small"><b>1y 7m</b></span>
+                            </div>
+                        </div>
+                        <div class="experience uk-flex uk-flex-left@l margin-top-5 justify-content-between">
+                            <div>
+                                <span><b class="uk-text-success">Junior Web Developer</b> at Guesty</span>
+                            </div>
+                            <div class="dates">
+                                <span class="uk-text-small">(Jan 2018 - Jan 2020)</span>
+                                <span class="uk-text-small"><b>1y 7m</b></span>
+                            </div>
+                        </div>
+                        <div class="experience uk-flex uk-flex-left@l margin-top-5 justify-content-between">
+                            <div>
+                                <span><b>Account Manager</b> at Guesty</span>
+                            </div>
+                            <div class="dates">
+                                <span class="uk-text-small">(Jan 2018 - Jan 2020)</span>
+                                <span class="uk-text-small"><b>1y 7m</b></span>
+                            </div>
+                        </div>
+                        </br>
+                        <div class="uk-flex uk-flex-left@l justify-content-between education">
+                            <div>
+                                <span class="uk-text-secondary uk-text-small">Kyiv National University of Technologies & Design (KNUTD), Master's Degree</span>
+                            </div>
+                            <div>
+                                <span class="uk-text-small">(Jan 2019 - Present)</span>
+                            </div>
+                        </div>
+                        <div class="uk-flex uk-flex-left@l justify-content-between education">
+                            <div>
+                                <span class="uk-text-secondary uk-text-small">42, Digital Technologies Developer</span>
+                            </div>
+                            <div>
+                                <span class="uk-text-small">(Jan 2019 - Present)</span>
+                            </div>
+                        </div>
+                        <div class="uk-flex uk-flex-left@l justify-content-between education">
+                            <div><span class="uk-text-secondary uk-text-small">Unit Factory</span></div>
+                            <div><span class="uk-text-small">(Jan 2019 - Present)</span></div>
+                        </div>
+                    </div>
+                    <hr/>
+
+                    <div class="person-row">
+                        <div class="uk-flex uk-flex-left@l profile-overview">
+                            <img alt="avatar" class="uk-border-circle" height="80" src="images/avatar.jpeg" width="80"/>
+                            <div class="uk-flex uk-flex-column uk-width-1-1">
+                                <div class="padding-left-10">
+                                    <h4 class="uk-margin-remove uk-text-secondary uk-text-medium">
+                                        <b>Bohdan Romanenko </b>
+                                    </h4>
+                                </div>
+                                <div class="padding-left-13">
+                                    <h5 class="uk-margin-remove uk-text-secondary uk-text-medium">
+                                        Javascript/Node.js Software Engineer Lead
+                                    </h5>
+                                </div>
+                                <div class="padding-left-8">
+                                    <div class="uk-flex margin-top-5">
+                                        <div>
+                                            <span uk-icon="icon: location; ratio: 0.8"></span><span class="uk-text-small"> Liviv, Ukraine </span>
+                                        </div>
+                                        <div class="uk-margin-medium-left">
+                                            <span class="uk-text-secondary uk-text-small">
+                                                <b><span class="uk-text-success"> 5y 3m </span> / 8y 1m</b>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="uk-flex uk-flex-left@l">
+                            <div class="uk-margin-top skills-info">
+                                <a class=" uk-button uk-button-default uk-button-xs uk-border-rounded padding-left-10 padding-right-10 ">Node.JS </a>
+                                <a class=" uk-button uk-button-default uk-button-xs uk-border-rounded padding-left-10 padding-right-10 ">React.js </a>
+                                <a class=" uk-button uk-button-default uk-button-xs uk-border-rounded padding-left-10 padding-right-10 ">HTML5</a>
+                                <a class=" uk-button uk-button-default uk-button-xs uk-border-rounded padding-left-10 padding-right-10 ">CSS3 </a>
+                                <a class=" uk-button uk-button-default uk-button-xs uk-border-rounded padding-left-10 padding-right-10 ">MongoDB </a>
+                                <a class=" uk-button uk-button-default uk-button-xs uk-border-rounded padding-left-10 padding-right-10 ">JQUERY </a>
+                                <a class=" uk-button uk-button-default uk-button-xs uk-border-rounded padding-left-10 padding-right-10 ">Swagger </a>
+                                <a class=" uk-button uk-button-default uk-button-xs uk-border-rounded padding-left-10 padding-right-10 ">Docker </a>
+                            </div>
+                        </div>
+                        <div class="experience uk-flex uk-flex-left@l margin-top-5 justify-content-between">
+                            <div>
+                                <span><b class="uk-text-success">Senior Javascript/Node.js Software Engineer</b> at Guesty</span>
+                            </div>
+                            <div class="dates">
+                                <span class="uk-text-small">(Jan 2018 - Jan 2020)</span>
+                                <span class="uk-text-small"><b>1y 7m</b></span>
+                            </div>
+                        </div>
+                        <div class="experience uk-flex uk-flex-left@l margin-top-5 justify-content-between">
+                            <div>
+                                <span><b class="uk-text-success">Junior Web Developer</b> at Guesty</span>
+                            </div>
+                            <div class="dates">
+                                <span class="uk-text-small">(Jan 2018 - Jan 2020)</span>
+                                <span class="uk-text-small"><b>1y 7m</b></span>
+                            </div>
+                        </div>
+                        <div class="experience uk-flex uk-flex-left@l margin-top-5 justify-content-between">
+                            <div>
+                                <span><b>Account Manager</b> at Guesty</span>
+                            </div>
+                            <div class="dates">
+                                <span class="uk-text-small">(Jan 2018 - Jan 2020)</span>
+                                <span class="uk-text-small"><b>1y 7m</b></span>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="uk-flex uk-flex-left@l justify-content-between education">
+                            <div>
+                                <span class="uk-text-secondary uk-text-small">Kyiv National University of Technologies & Design (KNUTD), Master's Degree</span>
+                            </div>
+                            <div>
+                                <span class="uk-text-small">(Jan 2019 - Present)</span>
+                            </div>
+                        </div>
+                        <div class="uk-flex uk-flex-left@l justify-content-between education">
+                            <div>
+                                <span class="uk-text-secondary uk-text-small">42, Digital Technologies Developer</span>
+                            </div>
+                            <div>
+                                <span class="uk-text-small">(Jan 2019 - Present)</span>
+                            </div>
+                        </div>
+                        <div class="uk-flex uk-flex-left@l justify-content-between education">
+                            <div><span class="uk-text-secondary uk-text-small">Unit Factory</span></div>
+                            <div><span class="uk-text-small">(Jan 2019 - Present)</span></div>
+                        </div>
+                    </div>
+                    <hr/>
+
+                    <div class="person-row">
+                        <div class="uk-flex uk-flex-left@l profile-overview">
+                            <img alt="avatar" class="uk-border-circle" height="80" src="images/avatar.jpeg" width="80"/>
+                            <div class="uk-flex uk-flex-column uk-width-1-1">
+                                <div class="padding-left-10">
+                                    <h4 class="uk-margin-remove uk-text-secondary uk-text-medium">
+                                        <b>Bohdan Romanenko </b>
+                                    </h4>
+                                </div>
+                                <div class="padding-left-13">
+                                    <h5 class="uk-margin-remove uk-text-secondary uk-text-medium">
+                                        Javascript/Node.js Software Engineer Lead
+                                    </h5>
+                                </div>
+                                <div class="padding-left-8">
+                                    <div class="uk-flex margin-top-5">
+                                        <div>
+                                            <span uk-icon="icon: location; ratio: 0.8"></span><span class="uk-text-small"> Liviv, Ukraine </span>
+                                        </div>
+                                        <div class="uk-margin-medium-left">
+                                            <span class="uk-text-secondary uk-text-small">
+                                                <b><span class="uk-text-success"> 5y 3m </span> / 8y 1m</b>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="uk-flex uk-flex-left@l">
+                            <div class="uk-margin-top skills-info">
+                                <a class=" uk-button uk-button-default uk-button-xs uk-border-rounded padding-left-10 padding-right-10 ">Node.JS </a>
+                                <a class=" uk-button uk-button-default uk-button-xs uk-border-rounded padding-left-10 padding-right-10 ">React.js </a>
+                                <a class=" uk-button uk-button-default uk-button-xs uk-border-rounded padding-left-10 padding-right-10 ">HTML5</a>
+                                <a class=" uk-button uk-button-default uk-button-xs uk-border-rounded padding-left-10 padding-right-10 ">CSS3 </a>
+                                <a class=" uk-button uk-button-default uk-button-xs uk-border-rounded padding-left-10 padding-right-10 ">CSS3 </a>
+                                <a class=" uk-button uk-button-default uk-button-xs uk-border-rounded padding-left-10 padding-right-10 ">CSS3 </a>
+                                <a class=" uk-button uk-button-default uk-button-xs uk-border-rounded padding-left-10 padding-right-10 ">CSS3 </a>
+                                <a class=" uk-button uk-button-default uk-button-xs uk-border-rounded padding-left-10 padding-right-10 ">CSS3 </a>
+                                <a class=" uk-button uk-button-default uk-button-xs uk-border-rounded padding-left-10 padding-right-10 ">CSS3 </a>
+                                <a class=" uk-button uk-button-default uk-button-xs uk-border-rounded padding-left-10 padding-right-10 ">CSS3 </a>
+                                <a class=" uk-button uk-button-default uk-button-xs uk-border-rounded padding-left-10 padding-right-10 ">CSS3 </a>
+                                <a class=" uk-button uk-button-default uk-button-xs uk-border-rounded padding-left-10 padding-right-10 ">CSS3 </a>
+                                <a class=" uk-button uk-button-default uk-button-xs uk-border-rounded padding-left-10 padding-right-10 ">MongoDB </a>
+                                <a class=" uk-button uk-button-default uk-button-xs uk-border-rounded padding-left-10 padding-right-10 ">JQUERY </a>
+                                <a class=" uk-button uk-button-default uk-button-xs uk-border-rounded padding-left-10 padding-right-10 ">Swagger </a>
+                                <a class=" uk-button uk-button-default uk-button-xs uk-border-rounded padding-left-10 padding-right-10 ">Docker </a>
+                            </div>
+                        </div>
+                        <div class="experience uk-flex uk-flex-left@l margin-top-5 justify-content-between">
+                            <div>
+                                <span><b class="uk-text-success">Senior Javascript/Node.js Software Engineer</b> at Guesty</span>
+                            </div>
+                            <div class="dates">
+                                <span class="uk-text-small">(Jan 2018 - Jan 2020)</span>
+                                <span class="uk-text-small"><b>1y 7m</b></span>
+                            </div>
+                        </div>
+                        <div class="experience uk-flex uk-flex-left@l margin-top-5 justify-content-between">
+                            <div>
+                                <span><b class="uk-text-success">Junior Web Developer</b> at Guesty</span>
+                            </div>
+                            <div class="dates">
+                                <span class="uk-text-small">(Jan 2018 - Jan 2020)</span>
+                                <span class="uk-text-small"><b>1y 7m</b></span>
+                            </div>
+                        </div>
+                        <div class="experience uk-flex uk-flex-left@l margin-top-5 justify-content-between">
+                            <div>
+                                <span><b>Account Manager</b> at Guesty</span>
+                            </div>
+                            <div class="dates">
+                                <span class="uk-text-small">(Jan 2018 - Jan 2020)</span>
+                                <span class="uk-text-small"><b>1y 7m</b></span>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="uk-flex uk-flex-left@l justify-content-between education">
+                            <div>
+                                <span class="uk-text-secondary uk-text-small">Kyiv National University of Technologies & Design (KNUTD), Master's Degree</span>
+                            </div>
+                            <div>
+                                <span class="uk-text-small">(Jan 2019 - Present)</span>
+                            </div>
+                        </div>
+                        <div class="uk-flex uk-flex-left@l justify-content-between education">
+                            <div>
+                                <span class="uk-text-secondary uk-text-small">42, Digital Technologies Developer</span>
+                            </div>
+                            <div>
+                                <span class="uk-text-small">(Jan 2019 - Present)</span>
+                            </div>
+                        </div>
+                        <div class="uk-flex uk-flex-left@l justify-content-between education">
+                            <div><span class="uk-text-secondary uk-text-small">Unit Factory</span></div>
+                            <div><span class="uk-text-small">(Jan 2019 - Present)</span></div>
+                        </div>
+                    </div>
+                    <hr/>
+
+                    <div class="person-row">
+                        <div class="uk-flex uk-flex-left@l profile-overview">
+                            <img alt="avatar" class="uk-border-circle" height="80" src="images/avatar.jpeg" width="80"/>
+                            <div class="uk-flex uk-flex-column uk-width-1-1">
+                                <div class="padding-left-10">
+                                    <h4 class="uk-margin-remove uk-text-secondary uk-text-medium">
+                                        <b>Bohdan Romanenko </b>
+                                    </h4>
+                                </div>
+                                <div class="padding-left-13">
+                                    <h5 class="uk-margin-remove uk-text-secondary uk-text-medium">
+                                        Javascript/Node.js Software Engineer Lead
+                                    </h5>
+                                </div>
+                                <div class="padding-left-8">
+                                    <div class="uk-flex margin-top-5">
+                                        <div>
+                                            <span uk-icon="icon: location; ratio: 0.8"></span><span class="uk-text-small"> Liviv, Ukraine </span>
+                                        </div>
+                                        <div class="uk-margin-medium-left">
+                                            <span class="uk-text-secondary uk-text-small">
+                                                <b><span class="uk-text-success"> 5y 3m </span> / 8y 1m</b>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="uk-flex uk-flex-left@l">
+                            <div class="uk-margin-top skills-info">
+                                <a class=" uk-button uk-button-default uk-button-xs uk-border-rounded padding-left-10 padding-right-10 ">Node.JS </a>
+                                <a class=" uk-button uk-button-default uk-button-xs uk-border-rounded padding-left-10 padding-right-10 ">React.js </a>
+                                <a class=" uk-button uk-button-default uk-button-xs uk-border-rounded padding-left-10 padding-right-10 ">HTML5</a>
+                                <a class=" uk-button uk-button-default uk-button-xs uk-border-rounded padding-left-10 padding-right-10 ">CSS3 </a>
+                                <a class=" uk-button uk-button-default uk-button-xs uk-border-rounded padding-left-10 padding-right-10 ">MongoDB </a>
+                                <a class=" uk-button uk-button-default uk-button-xs uk-border-rounded padding-left-10 padding-right-10 ">JQUERY </a>
+                                <a class=" uk-button uk-button-default uk-button-xs uk-border-rounded padding-left-10 padding-right-10 ">Swagger </a>
+                                <a class=" uk-button uk-button-default uk-button-xs uk-border-rounded padding-left-10 padding-right-10 ">Docker </a>
+                            </div>
+                        </div>
+                        <div class="experience uk-flex uk-flex-left@l margin-top-5 justify-content-between">
+                            <div>
+                                <span><b class="uk-text-success">Senior Javascript/Node.js Software Engineer</b> at Guesty</span>
+                            </div>
+                            <div class="dates">
+                                <span class="uk-text-small">(Jan 2018 - Jan 2020)</span>
+                                <span class="uk-text-small"><b>1y 7m</b></span>
+                            </div>
+                        </div>
+                        <div class="experience uk-flex uk-flex-left@l margin-top-5 justify-content-between">
+                            <div>
+                                <span><b class="uk-text-success">Junior Web Developer</b> at Guesty</span>
+                            </div>
+                            <div class="dates">
+                                <span class="uk-text-small">(Jan 2018 - Jan 2020)</span>
+                                <span class="uk-text-small"><b>1y 7m</b></span>
+                            </div>
+                        </div>
+                        <div class="experience uk-flex uk-flex-left@l margin-top-5 justify-content-between">
+                            <div>
+                                <span><b>Account Manager</b> at Guesty</span>
+                            </div>
+                            <div class="dates">
+                                <span class="uk-text-small">(Jan 2018 - Jan 2020)</span>
+                                <span class="uk-text-small"><b>1y 7m</b></span>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="uk-flex uk-flex-left@l justify-content-between education">
+                            <div>
+                                <span class="uk-text-secondary uk-text-small">Kyiv National University of Technologies & Design (KNUTD), Master's Degree</span>
+                            </div>
+                            <div>
+                                <span class="uk-text-small">(Jan 2019 - Present)</span>
+                            </div>
+                        </div>
+                        <div class="uk-flex uk-flex-left@l justify-content-between education">
+                            <div>
+                                <span class="uk-text-secondary uk-text-small">42, Digital Technologies Developer</span>
+                            </div>
+                            <div>
+                                <span class="uk-text-small">(Jan 2019 - Present)</span>
+                            </div>
+                        </div>
+                        <div class="uk-flex uk-flex-left@l justify-content-between education">
+                            <div><span class="uk-text-secondary uk-text-small">Unit Factory</span></div>
+                            <div><span class="uk-text-small">(Jan 2019 - Present)</span></div>
+                        </div>
+                    </div>
+                    <hr/>
+
+                    <div class="person-row">
+                        <div class="uk-flex uk-flex-left@l profile-overview">
+                            <img alt="avatar" class="uk-border-circle" height="80" src="images/avatar.jpeg" width="80"/>
+                            <div class="uk-flex uk-flex-column uk-width-1-1">
+                                <div class="padding-left-10">
+                                    <h4 class="uk-margin-remove uk-text-secondary uk-text-medium">
+                                        <b>Bohdan Romanenko </b>
+                                    </h4>
+                                </div>
+                                <div class="padding-left-13">
+                                    <h5 class="uk-margin-remove uk-text-secondary uk-text-medium">
+                                        Javascript/Node.js Software Engineer Lead
+                                    </h5>
+                                </div>
+                                <div class="padding-left-8">
+                                    <div class="uk-flex margin-top-5">
+                                        <div>
+                                            <span uk-icon="icon: location; ratio: 0.8"></span><span class="uk-text-small"> Liviv, Ukraine </span>
+                                        </div>
+                                        <div class="uk-margin-medium-left">
+                                            <span class="uk-text-secondary uk-text-small">
+                                                <b><span class="uk-text-success"> 5y 3m </span> / 8y 1m</b>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="uk-flex uk-flex-left@l">
+                            <div class="uk-margin-top skills-info">
+                                <a class=" uk-button uk-button-default uk-button-xs uk-border-rounded padding-left-10 padding-right-10 ">Node.JS </a>
+                                <a class=" uk-button uk-button-default uk-button-xs uk-border-rounded padding-left-10 padding-right-10 ">React.js </a>
+                                <a class=" uk-button uk-button-default uk-button-xs uk-border-rounded padding-left-10 padding-right-10 ">HTML5</a>
+                                <a class=" uk-button uk-button-default uk-button-xs uk-border-rounded padding-left-10 padding-right-10 ">CSS3 </a>
+                                <a class=" uk-button uk-button-default uk-button-xs uk-border-rounded padding-left-10 padding-right-10 ">MongoDB </a>
+                                <a class=" uk-button uk-button-default uk-button-xs uk-border-rounded padding-left-10 padding-right-10 ">JQUERY </a>
+                                <a class=" uk-button uk-button-default uk-button-xs uk-border-rounded padding-left-10 padding-right-10 ">Swagger </a>
+                                <a class=" uk-button uk-button-default uk-button-xs uk-border-rounded padding-left-10 padding-right-10 ">Docker </a>
+                            </div>
+                        </div>
+                        <div class="experience uk-flex uk-flex-left@l margin-top-5 justify-content-between">
+                            <div>
+                                <span><b class="uk-text-success">Senior Javascript/Node.js Software Engineer</b> at Guesty</span>
+                            </div>
+                            <div class="dates">
+                                <span class="uk-text-small">(Jan 2018 - Jan 2020)</span>
+                                <span class="uk-text-small"><b>1y 7m</b></span>
+                            </div>
+                        </div>
+                        <div class="experience uk-flex uk-flex-left@l margin-top-5 justify-content-between">
+                            <div>
+                                <span><b class="uk-text-success">Junior Web Developer</b> at Guesty</span>
+                            </div>
+                            <div class="dates">
+                                <span class="uk-text-small">(Jan 2018 - Jan 2020)</span>
+                                <span class="uk-text-small"><b>1y 7m</b></span>
+                            </div>
+                        </div>
+                        <div class="experience uk-flex uk-flex-left@l margin-top-5 justify-content-between">
+                            <div>
+                                <span><b>Account Manager</b> at Guesty</span>
+                            </div>
+                            <div class="dates">
+                                <span class="uk-text-small">(Jan 2018 - Jan 2020)</span>
+                                <span class="uk-text-small"><b>1y 7m</b></span>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="uk-flex uk-flex-left@l justify-content-between education">
+                            <div>
+                                <span class="uk-text-secondary uk-text-small">Kyiv National University of Technologies & Design (KNUTD), Master's Degree</span>
+                            </div>
+                            <div>
+                                <span class="uk-text-small">(Jan 2019 - Present)</span>
+                            </div>
+                        </div>
+                        <div class="uk-flex uk-flex-left@l justify-content-between education">
+                            <div>
+                                <span class="uk-text-secondary uk-text-small">42, Digital Technologies Developer</span>
+                            </div>
+                            <div>
+                                <span class="uk-text-small">(Jan 2019 - Present)</span>
+                            </div>
+                        </div>
+                        <div class="uk-flex uk-flex-left@l justify-content-between education">
+                            <div><span class="uk-text-secondary uk-text-small">Unit Factory</span></div>
+                            <div><span class="uk-text-small">(Jan 2019 - Present)</span></div>
+                        </div>
+                    </div>
+                    <hr/>
+
+                    <div class="person-row">
+                        <div class="uk-flex uk-flex-left@l profile-overview">
+                            <img alt="avatar" class="uk-border-circle" height="80" src="images/avatar.jpeg" width="80"/>
+                            <div class="uk-flex uk-flex-column uk-width-1-1">
+                                <div class="padding-left-10">
+                                    <h4 class="uk-margin-remove uk-text-secondary uk-text-medium">
+                                        <b>Bohdan Romanenko </b>
+                                    </h4>
+                                </div>
+                                <div class="padding-left-13">
+                                    <h5 class="uk-margin-remove uk-text-secondary uk-text-medium">
+                                        Javascript/Node.js Software Engineer Lead
+                                    </h5>
+                                </div>
+                                <div class="padding-left-8">
+                                    <div class="uk-flex margin-top-5">
+                                        <div>
+                                            <span uk-icon="icon: location; ratio: 0.8"></span><span class="uk-text-small"> Liviv, Ukraine </span>
+                                        </div>
+                                        <div class="uk-margin-medium-left">
+                                            <span class="uk-text-secondary uk-text-small">
+                                                <b><span class="uk-text-success"> 5y 3m </span> / 8y 1m</b>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="uk-flex uk-flex-left@l">
+                            <div class="uk-margin-top skills-info">
+                                <a class=" uk-button uk-button-default uk-button-xs uk-border-rounded padding-left-10 padding-right-10 ">Node.JS </a>
+                                <a class=" uk-button uk-button-default uk-button-xs uk-border-rounded padding-left-10 padding-right-10 ">React.js </a>
+                                <a class=" uk-button uk-button-default uk-button-xs uk-border-rounded padding-left-10 padding-right-10 ">HTML5</a>
+                                <a class=" uk-button uk-button-default uk-button-xs uk-border-rounded padding-left-10 padding-right-10 ">CSS3 </a>
+                                <a class=" uk-button uk-button-default uk-button-xs uk-border-rounded padding-left-10 padding-right-10 ">MongoDB </a>
+                                <a class=" uk-button uk-button-default uk-button-xs uk-border-rounded padding-left-10 padding-right-10 ">JQUERY </a>
+                                <a class=" uk-button uk-button-default uk-button-xs uk-border-rounded padding-left-10 padding-right-10 ">Swagger </a>
+                                <a class=" uk-button uk-button-default uk-button-xs uk-border-rounded padding-left-10 padding-right-10 ">Docker </a>
+                            </div>
+                        </div>
+                        <div class="experience uk-flex uk-flex-left@l margin-top-5 justify-content-between">
+                            <div>
+                                <span><b class="uk-text-success">Senior Javascript/Node.js Software Engineer</b> at Guesty</span>
+                            </div>
+                            <div class="dates">
+                                <span class="uk-text-small">(Jan 2018 - Jan 2020)</span>
+                                <span class="uk-text-small"><b>1y 7m</b></span>
+                            </div>
+                        </div>
+                        <div class="experience uk-flex uk-flex-left@l margin-top-5 justify-content-between">
+                            <div>
+                                <span><b class="uk-text-success">Junior Web Developer</b> at Guesty</span>
+                            </div>
+                            <div class="dates">
+                                <span class="uk-text-small">(Jan 2018 - Jan 2020)</span>
+                                <span class="uk-text-small"><b>1y 7m</b></span>
+                            </div>
+                        </div>
+                        <div class="experience uk-flex uk-flex-left@l margin-top-5 justify-content-between">
+                            <div>
+                                <span><b>Account Manager</b> at Guesty</span>
+                            </div>
+                            <div class="dates">
+                                <span class="uk-text-small">(Jan 2018 - Jan 2020)</span>
+                                <span class="uk-text-small"><b>1y 7m</b></span>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="uk-flex uk-flex-left@l justify-content-between education">
+                            <div>
+                                <span class="uk-text-secondary uk-text-small">Kyiv National University of Technologies & Design (KNUTD), Master's Degree</span>
+                            </div>
+                            <div>
+                                <span class="uk-text-small">(Jan 2019 - Present)</span>
+                            </div>
+                        </div>
+                        <div class="uk-flex uk-flex-left@l justify-content-between education">
+                            <div>
+                                <span class="uk-text-secondary uk-text-small">42, Digital Technologies Developer</span>
+                            </div>
+                            <div>
+                                <span class="uk-text-small">(Jan 2019 - Present)</span>
+                            </div>
+                        </div>
+                        <div class="uk-flex uk-flex-left@l justify-content-between education">
+                            <div><span class="uk-text-secondary uk-text-small">Unit Factory</span></div>
+                            <div><span class="uk-text-small">(Jan 2019 - Present)</span></div>
+                        </div>
+                    </div>
+                    <hr/>
+
+                    <div class="person-row">
+                        <div class="uk-flex uk-flex-left@l profile-overview">
+                            <img alt="avatar" class="uk-border-circle" height="80" src="images/avatar.jpeg" width="80"/>
+                            <div class="uk-flex uk-flex-column uk-width-1-1">
+                                <div class="padding-left-10">
+                                    <h4 class="uk-margin-remove uk-text-secondary uk-text-medium">
+                                        <b>Bohdan Romanenko </b>
+                                    </h4>
+                                </div>
+                                <div class="padding-left-13">
+                                    <h5 class="uk-margin-remove uk-text-secondary uk-text-medium">
+                                        Javascript/Node.js Software Engineer Lead
+                                    </h5>
+                                </div>
+                                <div class="padding-left-8">
+                                    <div class="uk-flex margin-top-5">
+                                        <div>
+                                            <span uk-icon="icon: location; ratio: 0.8"></span><span class="uk-text-small"> Liviv, Ukraine </span>
+                                        </div>
+                                        <div class="uk-margin-medium-left">
+                                            <span class="uk-text-secondary uk-text-small">
+                                                <b><span class="uk-text-success"> 5y 3m </span> / 8y 1m</b>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="uk-flex uk-flex-left@l">
+                            <div class="uk-margin-top skills-info">
+                                <a class=" uk-button uk-button-default uk-button-xs uk-border-rounded padding-left-10 padding-right-10 ">Node.JS </a>
+                                <a class=" uk-button uk-button-default uk-button-xs uk-border-rounded padding-left-10 padding-right-10 ">React.js </a>
+                                <a class=" uk-button uk-button-default uk-button-xs uk-border-rounded padding-left-10 padding-right-10 ">HTML5</a>
+                                <a class=" uk-button uk-button-default uk-button-xs uk-border-rounded padding-left-10 padding-right-10 ">CSS3 </a>
+                                <a class=" uk-button uk-button-default uk-button-xs uk-border-rounded padding-left-10 padding-right-10 ">MongoDB </a>
+                                <a class=" uk-button uk-button-default uk-button-xs uk-border-rounded padding-left-10 padding-right-10 ">JQUERY </a>
+                                <a class=" uk-button uk-button-default uk-button-xs uk-border-rounded padding-left-10 padding-right-10 ">Swagger </a>
+                                <a class=" uk-button uk-button-default uk-button-xs uk-border-rounded padding-left-10 padding-right-10 ">Docker </a>
+                            </div>
+                        </div>
+                        <div class="experience uk-flex uk-flex-left@l margin-top-5 justify-content-between">
+                            <div>
+                                <span><b class="uk-text-success">Senior Javascript/Node.js Software Engineer</b> at Guesty</span>
+                            </div>
+                            <div class="dates">
+                                <span class="uk-text-small">(Jan 2018 - Jan 2020)</span>
+                                <span class="uk-text-small"><b>1y 7m</b></span>
+                            </div>
+                        </div>
+                        <div class="experience uk-flex uk-flex-left@l margin-top-5 justify-content-between">
+                            <div>
+                                <span><b class="uk-text-success">Junior Web Developer</b> at Guesty</span>
+                            </div>
+                            <div class="dates">
+                                <span class="uk-text-small">(Jan 2018 - Jan 2020)</span>
+                                <span class="uk-text-small"><b>1y 7m</b></span>
+                            </div>
+                        </div>
+                        <div class="experience uk-flex uk-flex-left@l margin-top-5 justify-content-between">
+                            <div>
+                                <span><b>Account Manager</b> at Guesty</span>
+                            </div>
+                            <div class="dates">
+                                <span class="uk-text-small">(Jan 2018 - Jan 2020)</span>
+                                <span class="uk-text-small"><b>1y 7m</b></span>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="uk-flex uk-flex-left@l justify-content-between education">
+                            <div>
+                                <span class="uk-text-secondary uk-text-small">Kyiv National University of Technologies & Design (KNUTD), Master's Degree</span>
+                            </div>
+                            <div>
+                                <span class="uk-text-small">(Jan 2019 - Present)</span>
+                            </div>
+                        </div>
+                        <div class="uk-flex uk-flex-left@l justify-content-between education">
+                            <div>
+                                <span class="uk-text-secondary uk-text-small">42, Digital Technologies Developer</span>
+                            </div>
+                            <div>
+                                <span class="uk-text-small">(Jan 2019 - Present)</span>
+                            </div>
+                        </div>
+                        <div class="uk-flex uk-flex-left@l justify-content-between education">
+                            <div><span class="uk-text-secondary uk-text-small">Unit Factory</span></div>
+                            <div><span class="uk-text-small">(Jan 2019 - Present)</span></div>
+                        </div>
+                    </div>
+                    <hr/>
+
+                    <div class="person-row">
+                        <div class="uk-flex uk-flex-left@l profile-overview">
+                            <img alt="avatar" class="uk-border-circle" height="80" src="images/avatar.jpeg" width="80"/>
+                            <div class="uk-flex uk-flex-column uk-width-1-1">
+                                <div class="padding-left-10">
+                                    <h4 class="uk-margin-remove uk-text-secondary uk-text-medium">
+                                        <b>Bohdan Romanenko </b>
+                                    </h4>
+                                </div>
+                                <div class="padding-left-13">
+                                    <h5 class="uk-margin-remove uk-text-secondary uk-text-medium">
+                                        Javascript/Node.js Software Engineer Lead
+                                    </h5>
+                                </div>
+                                <div class="padding-left-8">
+                                    <div class="uk-flex margin-top-5">
+                                        <div>
+                                            <span uk-icon="icon: location; ratio: 0.8"></span><span class="uk-text-small"> Liviv, Ukraine </span>
+                                        </div>
+                                        <div class="uk-margin-medium-left">
+                                            <span class="uk-text-secondary uk-text-small">
+                                                <b><span class="uk-text-success"> 5y 3m </span> / 8y 1m</b>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="uk-flex uk-flex-left@l">
+                            <div class="uk-margin-top skills-info">
+                                <a class=" uk-button uk-button-default uk-button-xs uk-border-rounded padding-left-10 padding-right-10 ">Node.JS </a>
+                                <a class=" uk-button uk-button-default uk-button-xs uk-border-rounded padding-left-10 padding-right-10 ">React.js </a>
+                                <a class=" uk-button uk-button-default uk-button-xs uk-border-rounded padding-left-10 padding-right-10 ">HTML5</a>
+                                <a class=" uk-button uk-button-default uk-button-xs uk-border-rounded padding-left-10 padding-right-10 ">CSS3 </a>
+                                <a class=" uk-button uk-button-default uk-button-xs uk-border-rounded padding-left-10 padding-right-10 ">MongoDB </a>
+                                <a class=" uk-button uk-button-default uk-button-xs uk-border-rounded padding-left-10 padding-right-10 ">JQUERY </a>
+                                <a class=" uk-button uk-button-default uk-button-xs uk-border-rounded padding-left-10 padding-right-10 ">Swagger </a>
+                                <a class=" uk-button uk-button-default uk-button-xs uk-border-rounded padding-left-10 padding-right-10 ">Docker </a>
+                            </div>
+                        </div>
+                        <div class="experience uk-flex uk-flex-left@l margin-top-5 justify-content-between">
+                            <div>
+                                <span><b class="uk-text-success">Senior Javascript/Node.js Software Engineer</b> at Guesty</span>
+                            </div>
+                            <div class="dates">
+                                <span class="uk-text-small">(Jan 2018 - Jan 2020)</span>
+                                <span class="uk-text-small"><b>1y 7m</b></span>
+                            </div>
+                        </div>
+                        <div class="experience uk-flex uk-flex-left@l margin-top-5 justify-content-between">
+                            <div>
+                                <span><b class="uk-text-success">Junior Web Developer</b> at Guesty</span>
+                            </div>
+                            <div class="dates">
+                                <span class="uk-text-small">(Jan 2018 - Jan 2020)</span>
+                                <span class="uk-text-small"><b>1y 7m</b></span>
+                            </div>
+                        </div>
+                        <div class="experience uk-flex uk-flex-left@l margin-top-5 justify-content-between">
+                            <div>
+                                <span><b>Account Manager</b> at Guesty</span>
+                            </div>
+                            <div class="dates">
+                                <span class="uk-text-small">(Jan 2018 - Jan 2020)</span>
+                                <span class="uk-text-small"><b>1y 7m</b></span>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="uk-flex uk-flex-left@l justify-content-between education">
+                            <div>
+                                <span class="uk-text-secondary uk-text-small">Kyiv National University of Technologies & Design (KNUTD), Master's Degree</span>
+                            </div>
+                            <div>
+                                <span class="uk-text-small">(Jan 2019 - Present)</span>
+                            </div>
+                        </div>
+                        <div class="uk-flex uk-flex-left@l justify-content-between education">
+                            <div>
+                                <span class="uk-text-secondary uk-text-small">42, Digital Technologies Developer</span>
+                            </div>
+                            <div>
+                                <span class="uk-text-small">(Jan 2019 - Present)</span>
+                            </div>
+                        </div>
+                        <div class="uk-flex uk-flex-left@l justify-content-between education">
+                            <div><span class="uk-text-secondary uk-text-small">Unit Factory</span></div>
+                            <div><span class="uk-text-small">(Jan 2019 - Present)</span></div>
+                        </div>
+                    </div>
+                    <hr/>
+
+                    <div class="person-row">
+                        <div class="uk-flex uk-flex-left@l profile-overview">
+                            <img alt="avatar" class="uk-border-circle" height="80" src="images/avatar.jpeg" width="80"/>
+                            <div class="uk-flex uk-flex-column uk-width-1-1">
+                                <div class="padding-left-10">
+                                    <h4 class="uk-margin-remove uk-text-secondary uk-text-medium">
+                                        <b>Bohdan Romanenko </b>
+                                    </h4>
+                                </div>
+                                <div class="padding-left-13">
+                                    <h5 class="uk-margin-remove uk-text-secondary uk-text-medium">
+                                        Javascript/Node.js Software Engineer Lead
+                                    </h5>
+                                </div>
+                                <div class="padding-left-8">
+                                    <div class="uk-flex margin-top-5">
+                                        <div>
+                                            <span uk-icon="icon: location; ratio: 0.8"></span><span class="uk-text-small"> Liviv, Ukraine </span>
+                                        </div>
+                                        <div class="uk-margin-medium-left">
+                                            <span class="uk-text-secondary uk-text-small">
+                                                <b><span class="uk-text-success"> 5y 3m </span> / 8y 1m</b>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="uk-flex uk-flex-left@l">
+                            <div class="uk-margin-top skills-info">
+                                <a class=" uk-button uk-button-default uk-button-xs uk-border-rounded padding-left-10 padding-right-10 ">Node.JS </a>
+                                <a class=" uk-button uk-button-default uk-button-xs uk-border-rounded padding-left-10 padding-right-10 ">React.js </a>
+                                <a class=" uk-button uk-button-default uk-button-xs uk-border-rounded padding-left-10 padding-right-10 ">HTML5</a>
+                                <a class=" uk-button uk-button-default uk-button-xs uk-border-rounded padding-left-10 padding-right-10 ">CSS3 </a>
+                                <a class=" uk-button uk-button-default uk-button-xs uk-border-rounded padding-left-10 padding-right-10 ">MongoDB </a>
+                                <a class=" uk-button uk-button-default uk-button-xs uk-border-rounded padding-left-10 padding-right-10 ">JQUERY </a>
+                                <a class=" uk-button uk-button-default uk-button-xs uk-border-rounded padding-left-10 padding-right-10 ">Swagger </a>
+                                <a class=" uk-button uk-button-default uk-button-xs uk-border-rounded padding-left-10 padding-right-10 ">Docker </a>
+                            </div>
+                        </div>
+                        <div class="experience uk-flex uk-flex-left@l margin-top-5 justify-content-between">
+                            <div>
+                                <span><b class="uk-text-success">Senior Javascript/Node.js Software Engineer</b> at Guesty</span>
+                            </div>
+                            <div class="dates">
+                                <span class="uk-text-small">(Jan 2018 - Jan 2020)</span>
+                                <span class="uk-text-small"><b>1y 7m</b></span>
+                            </div>
+                        </div>
+                        <div class="experience uk-flex uk-flex-left@l margin-top-5 justify-content-between">
+                            <div>
+                                <span><b class="uk-text-success">Junior Web Developer</b> at Guesty</span>
+                            </div>
+                            <div class="dates">
+                                <span class="uk-text-small">(Jan 2018 - Jan 2020)</span>
+                                <span class="uk-text-small"><b>1y 7m</b></span>
+                            </div>
+                        </div>
+                        <div class="experience uk-flex uk-flex-left@l margin-top-5 justify-content-between">
+                            <div>
+                                <span><b>Account Manager</b> at Guesty</span>
+                            </div>
+                            <div class="dates">
+                                <span class="uk-text-small">(Jan 2018 - Jan 2020)</span>
+                                <span class="uk-text-small"><b>1y 7m</b></span>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="uk-flex uk-flex-left@l justify-content-between education">
+                            <div>
+                                <span class="uk-text-secondary uk-text-small">Kyiv National University of Technologies & Design (KNUTD), Master's Degree</span>
+                            </div>
+                            <div>
+                                <span class="uk-text-small">(Jan 2019 - Present)</span>
+                            </div>
+                        </div>
+                        <div class="uk-flex uk-flex-left@l justify-content-between education">
+                            <div>
+                                <span class="uk-text-secondary uk-text-small">42, Digital Technologies Developer</span>
+                            </div>
+                            <div>
+                                <span class="uk-text-small">(Jan 2019 - Present)</span>
+                            </div>
+                        </div>
+                        <div class="uk-flex uk-flex-left@l justify-content-between education">
+                            <div><span class="uk-text-secondary uk-text-small">Unit Factory</span></div>
+                            <div><span class="uk-text-small">(Jan 2019 - Present)</span></div>
+                        </div>
+                    </div>
+                    <hr/>
+
+                    <div class="person-row">
+                        <div class="uk-flex uk-flex-left@l profile-overview">
+                            <img alt="avatar" class="uk-border-circle" height="80" src="images/avatar.jpeg" width="80"/>
+                            <div class="uk-flex uk-flex-column uk-width-1-1">
+                                <div class="padding-left-10">
+                                    <h4 class="uk-margin-remove uk-text-secondary uk-text-medium">
+                                        <b>Bohdan Romanenko </b>
+                                    </h4>
+                                </div>
+                                <div class="padding-left-13">
+                                    <h5 class="uk-margin-remove uk-text-secondary uk-text-medium">
+                                        Javascript/Node.js Software Engineer Lead
+                                    </h5>
+                                </div>
+                                <div class="padding-left-8">
+                                    <div class="uk-flex margin-top-5">
+                                        <div>
+                                            <span uk-icon="icon: location; ratio: 0.8"></span><span class="uk-text-small"> Liviv, Ukraine </span>
+                                        </div>
+                                        <div class="uk-margin-medium-left">
+                                            <span class="uk-text-secondary uk-text-small">
+                                                <b><span class="uk-text-success"> 5y 3m </span> / 8y 1m</b>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="uk-flex uk-flex-left@l">
+                            <div class="uk-margin-top skills-info">
+                                <a class=" uk-button uk-button-default uk-button-xs uk-border-rounded padding-left-10 padding-right-10 ">Node.JS </a>
+                                <a class=" uk-button uk-button-default uk-button-xs uk-border-rounded padding-left-10 padding-right-10 ">React.js </a>
+                                <a class=" uk-button uk-button-default uk-button-xs uk-border-rounded padding-left-10 padding-right-10 ">HTML5</a>
+                                <a class=" uk-button uk-button-default uk-button-xs uk-border-rounded padding-left-10 padding-right-10 ">CSS3 </a>
+                                <a class=" uk-button uk-button-default uk-button-xs uk-border-rounded padding-left-10 padding-right-10 ">MongoDB </a>
+                                <a class=" uk-button uk-button-default uk-button-xs uk-border-rounded padding-left-10 padding-right-10 ">JQUERY </a>
+                                <a class=" uk-button uk-button-default uk-button-xs uk-border-rounded padding-left-10 padding-right-10 ">Swagger </a>
+                                <a class=" uk-button uk-button-default uk-button-xs uk-border-rounded padding-left-10 padding-right-10 ">Docker </a>
+                            </div>
+                        </div>
+                        <div class="experience uk-flex uk-flex-left@l margin-top-5 justify-content-between">
+                            <div>
+                                <span><b class="uk-text-success">Senior Javascript/Node.js Software Engineer</b> at Guesty</span>
+                            </div>
+                            <div class="dates">
+                                <span class="uk-text-small">(Jan 2018 - Jan 2020)</span>
+                                <span class="uk-text-small"><b>1y 7m</b></span>
+                            </div>
+                        </div>
+                        <div class="experience uk-flex uk-flex-left@l margin-top-5 justify-content-between">
+                            <div>
+                                <span><b class="uk-text-success">Junior Web Developer</b> at Guesty</span>
+                            </div>
+                            <div class="dates">
+                                <span class="uk-text-small">(Jan 2018 - Jan 2020)</span>
+                                <span class="uk-text-small"><b>1y 7m</b></span>
+                            </div>
+                        </div>
+                        <div class="experience uk-flex uk-flex-left@l margin-top-5 justify-content-between">
+                            <div>
+                                <span><b>Account Manager</b> at Guesty</span>
+                            </div>
+                            <div class="dates">
+                                <span class="uk-text-small">(Jan 2018 - Jan 2020)</span>
+                                <span class="uk-text-small"><b>1y 7m</b></span>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="uk-flex uk-flex-left@l justify-content-between education">
+                            <div>
+                                <span class="uk-text-secondary uk-text-small">Kyiv National University of Technologies & Design (KNUTD), Master's Degree</span>
+                            </div>
+                            <div>
+                                <span class="uk-text-small">(Jan 2019 - Present)</span>
+                            </div>
+                        </div>
+                        <div class="uk-flex uk-flex-left@l justify-content-between education">
+                            <div>
+                                <span class="uk-text-secondary uk-text-small">42, Digital Technologies Developer</span>
+                            </div>
+                            <div>
+                                <span class="uk-text-small">(Jan 2019 - Present)</span>
+                            </div>
+                        </div>
+                        <div class="uk-flex uk-flex-left@l justify-content-between education">
+                            <div><span class="uk-text-secondary uk-text-small">Unit Factory</span></div>
+                            <div><span class="uk-text-small">(Jan 2019 - Present)</span></div>
+                        </div>
+                    </div>
+                </div>
+                <ul class="uk-pagination uk-flex-center" uk-margin>
+                    <li>
+                        <a href="#"><span uk-pagination-previous></span></a>
+                    </li>
+                    <li>
+                        <a href="#">1</a>
+                    </li>
+                    <li class="uk-disabled">
+                        <span>...</span>
+                    </li>
+                    <li>
+                        <a href="#">5</a>
+                    </li>
+                    <li>
+                        <a href="#">6</a>
+                    </li>
+                    <li class="uk-active">
+                        <label>7</label>
+                    </li>
+                    <li>
+                        <a href="#">8</a>
+                    </li>
+                    <li>
+                        <a href="#"><span uk-pagination-next></span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <hr class="margin-top-100"/>
+
+    <div id="footer" class="uk-section-small uk-text-center">
+        hi@techbanana.oi &nbsp;&nbsp;&nbsp;<span class="text-pr2">|</span>&nbsp;&nbsp;&nbsp; <img alt="linkedIn" class="margin-left-5 img-icons" src="images/linkedin-icon.png"/> <img alt="telegram" class="margin-left-5 img-icons" src="images/telegram-icon.png"/>
+    </div>
+</body>
+</html>

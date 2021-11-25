@@ -1,5 +1,3 @@
-const path = require('path');
-
 module.exports = {
     // publicPath: '/static/src/vue/dist/', // Should be STATIC_URL + path/to/build
     // outputDir: path.resolve(__dirname, '../joboardapi/bananaback/static/src/vue/dist/'), // Output to a directory in STATICFILES_DIRS

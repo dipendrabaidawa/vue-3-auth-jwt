@@ -1,56 +1,53 @@
 <template>
-  <div class="col-md-12 flex-center">
-    <div class="card card-container">
-      <!-- <img
-        id="profile-img"
-        src="//ssl.gstatic.com/accounts/ui/avatar_2x.png"
-        class="profile-img-card"
-      /> -->
-      <h2 class="text-center font-weight-bold">Sign in</h2>
-      <Form @submit="handleLogin" :validation-schema="schema">
-        <div class="form-group">
-          <Field name="email" type="text" class="form-control" placeholder="john.doe@gmail.com" />
-          <ErrorMessage name="email" class="error-feedback" />
+  <div class="uk-section auth-page uk-section-muted uk-flex uk-flex-middle uk-animation-fade uk-background-default-important" uk-height-viewport>
+        <div class="uk-width-1-1">
+            <div class="uk-container">
+                <div class="uk-grid-margin uk-grid uk-grid-stack" uk-grid>
+                    <div class="uk-width-1-1@m">
+                        <div class="uk-margin uk-width-large uk-margin-auto uk-card uk-card-default uk-card-body uk-box-shadow-large">
+                          <a id="logo" class="uk-navbar-item uk-logo text-align-center" href="#">
+                              <img :src="require('../assets/images/logo.png')" uk-img width="250"/>
+                          </a>
+                          <h2 class="uk-card-title uk-text-center">Sign in</h2>
+                          <Form @submit="handleLogin" :validation-schema="schema">
+                            <div class="uk-margin">
+                              <div class="uk-inline uk-width-1-1">
+                                <span class="uk-form-icon" uk-icon="icon: mail"></span>
+                                <Field name="email" type="text" class="uk-input uk-form-large" placeholder="john.doe@gmail.com" />
+                                <ErrorMessage name="email" class="error-feedback" />
+                              </div>
+                            </div>
+                            <div class="uk-margin">
+                              <div class="uk-inline uk-width-1-1">
+                                <span class="uk-form-icon" uk-icon="icon: lock"></span>
+                                <Field name="password" type="password" class="uk-input uk-form-large" placeholder="*********" />
+                                <ErrorMessage name="password" class="error-feedback" />
+                              </div>
+                            </div>
+                            <div class="uk-margin">
+                                <button class="uk-button uk-button-primary uk-button-large uk-width-1-1" :disabled="loading">
+                                  <span v-show="loading" class="spinner-border spinner-border-sm"></span>
+                                  <span>Login</span>
+                                </button>
+                            </div>
+                            <div class="uk-text-small uk-text-center">
+                                Not registered?
+                                <router-link to="/register">Create an account</router-link>                          
+                            </div>
+                            <div class="uk-margin">
+                              <div uk-alert class="uk-alert-danger" v-if="is_error">
+                                  <a class="uk-alert-close" uk-close></a>
+                                  <h3>Authentication failed</h3>
+                                  <p>Your authentication information is incorrect. Please try again.</p>
+                              </div>
+                            </div>
+                          </Form>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="form-group">
-          <Field name="password" type="password" class="form-control" placeholder="*********" />
-          <ErrorMessage name="password" class="error-feedback" />
-        </div>
-
-        <div class="form-group">
-          <button class="btn btn-primary btn-block" :disabled="loading">
-            <span
-              v-show="loading"
-              class="spinner-border spinner-border-sm"
-            ></span>
-            <span>SIGN IN</span>
-          </button>
-        </div>
-
-        <div class="form-group">
-            <p class="text-center" >
-                <router-link to="/">
-                    Forgot Password ?
-                </router-link>
-            </p>
-        </div>
-
-        <div class="form-group">
-            <p class="text-center" >
-                <router-link to="/register">
-                    Sign Up
-                </router-link>
-            </p>
-        </div>
-
-        <div class="form-group">
-          <div v-if="message" class="alert alert-danger" role="alert">
-            {{ message }}
-          </div>
-        </div>
-      </Form>
     </div>
-  </div>
 </template>
 
 <script>
@@ -62,7 +59,7 @@ export default {
   components: {
     Form,
     Field,
-    ErrorMessage,
+    ErrorMessage
   },
   data() {
     const schema = yup.object().shape({
@@ -74,6 +71,7 @@ export default {
       loading: false,
       message: "",
       schema,
+      is_error: false
     };
   },
   computed: {
@@ -83,20 +81,21 @@ export default {
   },
   created() {
     if (this.loggedIn) {
-      this.$router.push("/profile");
+      this.$router.push("/candidates");
     }
   },
   methods: {
     handleLogin(user) {
       this.loading = true;
-
       this.$store.dispatch("auth/login", user).then(
         () => {
           console.log("login success", user);
-          this.$router.push("/profile");
+          this.$router.push("/candidates");
+          this.is_error = false;
         },
         (error) => {
           this.loading = false;
+          this.is_error = true;
           this.message =
             (error.response &&
               error.response.data &&
